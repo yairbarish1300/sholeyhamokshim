@@ -5,8 +5,20 @@ class Shoola {
     constructor() {
 
     }
-    clickCell() {
-
+    clickCell( i , j) {
+        this.board[i][j] *= 2
+        if (this.board[i][j] == -2) {
+            this.renderLoss()
+            this.active = false
+        }    
+        else if(this.board[i][j] == 2)
+        {
+            let num = showCell(contMine() , this.board[i][j])
+            const cell = document.querySelector(`.cell[data-i="${i}"][data-j="${j}"]`);
+            cell.innerHTML = num;
+            let nu2=this.calculateMine(i,j)
+            if(nu2==0)this.reveal();
+        }
     }
     checkWin() {
         for (let i = 0; i < 10; i++) {
