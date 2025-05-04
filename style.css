@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#bord{
+    height: 350px;
+    width: 350px;
+    border: 2px outset black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.cell{
+    height: 30px;
+    width: 30px;
+    border: 1px solid #999;
+    background: #ddd;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #666;
+    display: flex;
+    margin: 2px;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+.revealed{
+    box-shadow: inset 2px 2px 4px #666;
+    background: #aaa;
+}
+button{
+    display: block;
+    margin: 20px auto;
+}
+#mes{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
