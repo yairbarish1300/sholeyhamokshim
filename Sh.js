@@ -87,6 +87,7 @@ class Shoola {
     if (this.checkWin()) {
       this.active = false;
       this.win = true;
+      this.renderWin()
       // אפשר להוסיף הודעת ניצחון כאן
     }
   }
@@ -114,6 +115,8 @@ class Shoola {
         cells[i].classList.add("revealed");
       }
     }
+    mes.innerHTML= "game over!"
+    mes.style.color='red'
   }
 
   showCell(num, i, j) {
@@ -136,12 +139,15 @@ class Shoola {
     }
   }
   renderWin(){
-      
+    mes.innerHTML= "you won!"
+    mes.style.color='green' 
   }
 }
 
 // התחלת המשחק:
-const shoolaGame = new Shoola(0, 0, 15);
+const shoolaGame = new Shoola(0, 0, 1);
 const newGame=()=>{
-  shoolaGame.init(0, 0, 15);
+  mes.innerHTML=""
+
+  shoolaGame.init(0, 0, 1);
 }
