@@ -31,7 +31,7 @@ class Shoola {
     init(whith, height, boombsNum) {
         this.board = [];
         for (let i = 0; i < 10; i++) {
-            this.board.push(new Array(10).fill(0)) // creat 2 dimensions Array
+            this.board.push(new Array(10).fill(0)) // create 2 dimensions Array
 
         }
         for (let i = 0; i < boombsNum; i++) {
