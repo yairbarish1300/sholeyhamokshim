@@ -13,11 +13,11 @@ class Shoola {
         }    
         else if(this.board[i][j] == 2)
         {
-            let num = showCell(contMine() , this.board[i][j])
-            const cell = document.querySelector(`.cell[data-i="${i}"][data-j="${j}"]`);
-            cell.innerHTML = num;
-            let nu2=this.calculateMine(i,j)
-            if(nu2==0)this.reveal();
+            let numOfBombs=this.calculateMine(i,j);
+            showCell(numOfBombs, this.board[i][j])
+            // const cell = document.querySelector(`.cell[data-i="${i}"][data-j="${j}"]`);
+            // if (numOfBombs!=0)cell.innerHTML=numOfBombs;
+            if(numOfBombs==0)this.reveal();
         }
     }
     checkWin() {
